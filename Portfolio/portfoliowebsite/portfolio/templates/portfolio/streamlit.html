@@ -1,0 +1,50 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% trans "Portfolio" %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'portfolio/namesignature.png' %}" alt="{% trans 'Adam Sadaka' %}">
+        </div>
+        <div class="nav-links">
+            <a href="/">{% trans 'Home' %}</a>
+            <a href="{% url 'projects' %}">{% trans 'Projects' %}</a>
+            <a href="#" onclick="openContactForm()">{% trans 'Contact' %}</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/a-sadaka/" target="_blank">
+                    <img src="{% static 'portfolio/in.png' %}" alt="{% trans 'LinkedIn' %}">
+                </a>
+                <a href="https://www.youtube.com/@BionicAnalytics" target="_blank">
+                    <img src="{% static 'portfolio/youtube.png' %}" alt="{% trans 'YouTube' %}">
+                </a>
+                <a href="https://github.com/BionicAnalyst/BionicAnalyticsLabs" target="_blank">
+                    <img src="{% static 'portfolio/github.png' %}" alt="{% trans 'GitHub' %}">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="language-selector">
+        <form id="language-form" action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="language" id="language-input" value="{{ LANGUAGE_CODE }}">
+        </form>
+        <img src="{% static 'portfolio/en.png' %}" alt="{% trans 'English' %}" title="{% trans 'English' %}" onclick="changeLanguage('en')" class="language-flag {% if LANGUAGE_CODE == 'en' %}selected{% endif %}">
+        <img src="{% static 'portfolio/fr.png' %}" alt="{% trans 'French' %}" title="{% trans 'French' %}" onclick="changeLanguage('fr')" class="language-flag {% if LANGUAGE_CODE == 'fr' %}selected{% endif %}">
+    </div>
+
+    
+        <div id="content-area"  class="content">
+            <div class="dashboard-container">
+                <iframe src="http://195.200.15.105:2222" allowfullscreen></iframe>
+            </div>
+        </div>
+</body>
+</html>

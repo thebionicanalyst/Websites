@@ -1,0 +1,307 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% trans "Adam's Portfolio" %}</title>
+    
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+    <script>
+        // JavaScript to show and hide the success message
+        function showSuccessMessage() {
+            var messageDiv = document.getElementById('success-message');
+            messageDiv.style.display = 'block';
+            setTimeout(function() {
+                messageDiv.style.display = 'none';
+            }, 1000); // 1 second
+        }
+
+        // Function to check if there are messages in Django messages framework
+        document.addEventListener("DOMContentLoaded", function() {
+            {% if messages %}
+                showSuccessMessage();
+            {% endif %}
+
+            // Check for query parameter to open contact form
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('show_contact_form') === 'true') {
+                document.getElementById('contactModal').style.display = 'block';
+                // Optional: Scroll to the contact form section
+                document.getElementById('contactModal').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'portfolio/namesignature.png' %}" alt="{% trans 'Adam Sadaka' %}">
+        </div>
+        <div class="nav-links">
+            <a href="/">{% trans 'Home' %}</a>
+            <a href="#services">{% trans 'Services' %}</a>
+            <a href="#resources">{% trans 'Resources' %}</a> <!-- Resources link -->
+            <a href="#reviews">{% trans 'Reviews' %}</a> <!-- Reviews link -->
+            <div class="contact-form">
+                <a href="javascript:void(0);" onclick="openContactForm()">{% trans 'Contact' %}</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/a-sadaka/" target="_blank">
+                    <img src="{% static 'portfolio/in.png' %}" alt="{% trans 'LinkedIn' %}">
+                </a>
+                <a href="https://www.youtube.com/@BionicAnalytics" target="_blank">
+                    <img src="{% static 'portfolio/youtube.png' %}" alt="{% trans 'YouTube' %}">
+                </a>
+                <a href="https://github.com/BionicAnalyst/BionicAnalyticsLabs" target="_blank">
+                    <img src="{% static 'portfolio/github.png' %}" alt="{% trans 'GitHub' %}">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Display success messages -->
+    <div id="success-message">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+
+    <header>
+        <div class="header-content">
+            <div class="header-image">
+                <img src="{% static 'portfolio/silhouette.png' %}" alt="{% trans 'Adam\'s Image' %}">
+            </div>
+            <div class="header-text">
+                <div style="height: 40px;"></div> <!-- Adjust height as needed -->
+                <h2>{% trans "Welcome! 👋" %}</h2>
+                <h2>{% trans "I'm ADAM your" %} <span class="analytics">{% trans ' DATA ANALYST' %}</span></h1>
+                <div style="height: 40px;"></div> <!-- Adjust height as needed -->
+                <h2>{% trans 'Let’s boost your business with:' %}</h2>
+                <h2>{% trans '- Data Analysis' %}</h2>
+                <h2>{% trans '- Data Visualisation' %}</h2>
+                <h2>{% trans '- Analytics Engineering' %}</h2>
+                <div class="header-buttons">
+                    <div class="buttons-wrapper">
+                        <div style="height: 100px;"></div> <!-- Adjust height as needed -->
+                        <span class="pointing-right-emoji">{% trans '👉' %}</span>
+                        <button onclick="location.href='{% url 'skillset' %}'">{% trans 'My Skillset' %}</button>
+                        <span> & </span>
+                        <button onclick="location.href='{% url 'projects' %}'">{% trans 'My Projects' %}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services">
+        <h2>{% trans 'How I Can Help You' %}</h2>
+        <div style="height: 10px;"></div> <!-- Adjust height as needed -->
+        <div class="services">
+            <!-- Service 1 -->
+            <div class="service">
+                <h3>🚀 {% trans 'BOOST YOUR BUSINESS WITH THE POWER OF DATA:' %}</h3>
+                <p>{% trans 'Transform raw data into actionable insights with expert help and guidance for a competitive edge.' %}</p>
+                <p>{% trans '🔍 Seamless Data Collection: Capture high-quality, reliable data effortlessly to power your strategy.' %}</p>
+                <p>{% trans '🔒 Data Integrity: Ensure accuracy and trustworthiness with clean, error-free data.' %}</p>
+                <p>{% trans '🧠 Smart Data Modeling: Build scalable, efficient models that drive deeper, more valuable insights.' %}</p>
+                <p>{% trans '📊 Impactful Analysis & Visualization: Make data-driven decisions with clear, compelling analytics and visuals.' %}</p>
+</div>
+            <!-- Service 2 -->
+            <div class="service">
+                <h3>👨🏼‍🏫 {% trans 'ELEVATE YOUR TEAM\'S DATA SKILLS:' %}</h3>
+                <p>{% trans 'Sharing knowledge is essential for growth and is one of my core values. Let me partner with your team to drive success through:' %}</p> 
+                <p>{% trans '🧠 Interactive Courses: Master data tools from collection to visualization through engaging in-person or virtual sessions.' %}</p> 
+                <p>{% trans '🎯 Practical Learning: Tackle real-world data challenges confidently with hands-on, action-based training.' %}</p> 
+                <p>{% trans '📚 Customized Training: Tailored programs and resources designed specifically for your team’s needs, ensuring they excel.' %}</p> 
+                <p>{% trans '🔍 Consulting: Provide clear guidance to keep your projects on the right track for successful outcomes.' %}</p>
+            </div>
+        </div>
+    </section>
+
+    <div style="height: 30px;"></div> <!-- Adjust height as needed -->
+
+    <section id="resources">
+        <h2>{% trans 'Resources I Recommend' %}</h2>
+        <div style="height: 10px;"></div> <!-- Adjust height as needed -->
+            <!-- Resource 1 -->
+            <div class="service">
+                <h3>🎥 {% trans 'My YouTube & GitHub' %}</h3>
+                <ul>
+                    <p>{% trans 'Explore my Youtube channel and GitHub for diverse data use cases and tutorials. I provide practical examples, real business scenarios, and a taste of enterprise-level cases to boost your data skills. Perfect for data enthusiasts at any level, with resources designed to enhance your learning experience.' %}</p>
+                    <div style="height: 10px;"></div> <!-- Adjust height as needed -->
+                    <div class="header-buttons">
+                        <div class="buttons-wrapper">
+                            <button onclick="location.href='https://github.com/YourGitHubUsername'">{% trans 'My GitHub link' %}</button>
+                            <span> & </span>
+                            <button onclick="location.href='https://www.youtube.com/@BionicAnalytics'">{% trans 'My Youtube link' %}</button>
+                        </div>                                             
+                </ul>
+            </div>
+            
+            <div style="height: 10px;"></div> <!-- Adjust height as needed -->
+
+            <!-- Resource 2 -->
+            <div class="service">
+                <h3>📚 {% trans 'Books' %}</h3>
+                <div class="books-carousel">
+                    <div class="book" data-description="{% trans 'This book emphasizes the importance of context-driven dashboard design. It taught me how to present data in a way that drives actionable insights and supports business decision-making.' %}">
+                        <img src="{% static 'portfolio/book1.jpg' %}" alt="{% trans 'Data Science from Scratch by Joel Grus' %}">
+                    </div>
+                    <div class="book" data-description="{% trans 'this book demystifies statistical concepts by grounding them in real-world contexts. It teaches how to critically analyze data, understand uncertainty, and avoid common errors, using evidence to support conclusions. Emphasizing clear communication, it guides readers to make informed, context-aware decisions based on solid statistical principles.' %}">
+                        <img src="{% static 'portfolio/book2.jpg' %}" alt="{% trans 'Storytelling with Data by Cole Nussbaumer Knaflic' %}">
+                    </div>
+                    <div class="book" data-description="{% trans 'This textbook provided me with a solid foundation in statistical theory and methods, highlighting the importance of rigorous data analysis and hypothesis testing in decision-making.' %}">
+                        <img src="{% static 'portfolio/book3.jpg' %}" alt="{% trans 'Analytics Engineering with SQL and dbt' %}">
+                    </div>
+                    <div class="book" data-description="{% trans 'This book taught me how to efficiently transform and model data, leveraging SQL and dbt to streamline analytics workflows and improve data management practices, making it one of the few guides on the emerging role of analytics engineering.' %}">
+                        <img src="{% static 'portfolio/book4.jpg' %}" alt="{% trans 'Deep Learning with Python by François Chollet' %}">
+                    </div>
+                    <div class="book" data-description="{% trans 'This book is a masterclass in personal leadership and effectiveness. It taught me the importance of proactive behavior, setting clear goals, and prioritizing tasks that align with core values. It instilled the importance of continuous self-improvement and collaboration. These habits form a foundation for an effective and influential leader.' %}">
+                        <img src="{% static 'portfolio/book5.jpg' %}" alt="{% trans 'Python Machine Learning by Sebastian Raschka' %}">
+                    </div>
+                </div>
+                <div id="book-description">
+                    {% trans "Hover over a book to see its description" %}
+                </div>
+            </div>
+
+    </section>
+    
+    <div style="height: 30px;"></div> <!-- Adjust height as needed -->
+
+    <section id="reviews">
+        <h2>{% trans 'What Collarborators and Friends Say about Me' %}</h2>
+        <div style="height: 10px;"></div> <!-- Adjust height as needed -->
+        <div class="services">
+                <!-- Review 1 -->
+                <div class="service">
+                    <p>{% trans '"Adam has the ideal profile that all managers seek.' %}</p>
+                    <p>{% trans 'His innovative spirit and dedication have made our department a benchmark within the company. His autonomy drives him to continually seek the best in his field and offer the best solutions to his clients.' %}</p>                      
+                    <p>{% trans 'What particularly distinguishes Adam is his ability to anticipate problems and adapt his proposals accordingly. He can identify opportunities and turn ideas into concrete actions with measurable and sustainable results.' %}</p>
+                    <p>{% trans 'I have had the pleasure of watching him grow since his internship, where he immediately demonstrated great potential. Today, he has become an essential member of our team, and I am very grateful for all he has accomplished. His professionalism, creativity, and passion for excellence make him an exceptional collaborator.' %}"</p>
+                    <h4>- Fabio FORTINO REBELO, Data Science Manager at Monoprix (<a href="https://www.linkedin.com/in/a-sadaka/details/recommendations/?detailScreenTabIndex=0" target="_blank" style="color: #ADD8E6;">LinkedIn recommendation</a>)</h4>
+                </div>
+            </div>
+            <div class="services">
+                <!-- Review 2 -->
+                <div class="service">
+                    <p>{% trans '"I had the chance to work with Adam on various DATA/PIM projects. He easily leveraged his solid expertise in the analytical field. His ability to transform raw data into clear and relevant insights significantly contributed to our successes. Adam is attentive, rigorous, passionate, and always willing to share knowledge. He has proven to be a valuable asset to the team."' %}</p>
+                    <h4>- Walid Richard, PIM Data Team Manager at Monoprix (<a href="https://www.linkedin.com/in/a-sadaka/details/recommendations/?detailScreenTabIndex=0" target="_blank" style="color: #ADD8E6;">LinkedIn recommendation</a>)</h4>
+                </div>
+                <!-- Review 3 -->
+                <div class="service">
+                    <p>{% trans '"I was fortunate to have Adam as a mentor at Monoprix. Always available, proactive, and a great teacher, he always finds effective solutions to problems. His expertise and support truly made a difference!"' %}</p>
+                    <h4>- Flora Zheng, M2 TIDE Student at Paris 1 Panthéon-Sorbonne (<a href="https://www.linkedin.com/in/a-sadaka/details/recommendations/?detailScreenTabIndex=0" target="_blank" style="color: #ADD8E6;">LinkedIn recommendation</a>)</h4>
+                </div>
+            </div>
+        </div>      
+        <div style="height: 30px;"></div> <!-- Adjust height as needed -->
+
+    <section id="reviews">
+        <div style="height: 10px;"></div> <!-- Adjust height as needed -->
+        <h2>{% trans 'My Note to All' %}</h2>
+        <div class="closingsentence">
+            <p>{% trans 'Thank you for your kind words and trust. Each review is a reminder of the path we`ve walked together, yet also of the journey that still lies ahead.' %}</p>
+            <p>{% trans 'As Michelangelo said at 87, "I am still learning". With every project, I strive to grow, learn, and refine my craft.' %}</p>
+            <p>{% trans 'Let`s continue walking this path together 🤝🏻' %}</p>
+         </div>
+    </section>
+    
+
+    <!-- The Modal -->
+    <div id="contactModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('contactModal').style.display='none'">&times;</span>
+            <h2>{% trans 'Contact Me' %}</h2>
+            <form method="post" action="{% url 'home' %}">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="{% trans 'Your Name' %}" required>
+                <input type="email" name="email" placeholder="{% trans 'Your Email' %}" required>
+                <textarea name="message" placeholder="{% trans 'Your Message' %}" required></textarea>
+                <button type="submit" class="send-message">{% trans 'Send Message' %}</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bionic Analytics</p>
+    </footer>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <form id="language-form" action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="language" id="language-input" value="{{ LANGUAGE_CODE }}">
+        </form>
+        <img src="{% static 'portfolio/en.png' %}" alt="{% trans 'English' %}" title="{% trans 'English' %}" onclick="changeLanguage('en')" class="language-flag {% if LANGUAGE_CODE == 'en' %}selected{% endif %}">
+        <img src="{% static 'portfolio/fr.png' %}" alt="{% trans 'French' %}" title="{% trans 'French' %}" onclick="changeLanguage('fr')" class="language-flag {% if LANGUAGE_CODE == 'fr' %}selected{% endif %}">
+    </div>
+
+    <script>
+        function changeLanguage(lang) {
+            var form = document.getElementById('language-form');
+            var input = document.getElementById('language-input');
+            input.value = lang;
+            form.submit();
+        }
+
+        function openContactForm() {
+            // Redirect to the home page with a query parameter to open the contact form
+            window.location.href = "{% url 'home' %}?show_contact_form=true";
+        }
+    </script>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const container = document.querySelector('.reviews-container');
+        const leftArrow = document.querySelector('.arrow-left');
+        const rightArrow = document.querySelector('.arrow-right');
+
+        let scrollInterval;
+        let scrollAmount = 10; // Adjust scroll amount per interval
+        let scrollSpeed = 10; // Interval duration in milliseconds
+
+        function startScrolling(direction) {
+            scrollInterval = setInterval(() => {
+                container.scrollBy({
+                    left: direction === 'left' ? -scrollAmount : scrollAmount,
+                    behavior: 'smooth'
+                });
+            }, scrollSpeed);
+        }
+
+        function stopScrolling() {
+            clearInterval(scrollInterval);
+        }
+
+        leftArrow.addEventListener('mouseover', () => startScrolling('left'));
+        leftArrow.addEventListener('mouseout', stopScrolling);
+        rightArrow.addEventListener('mouseover', () => startScrolling('right'));
+        rightArrow.addEventListener('mouseout', stopScrolling);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const books = document.querySelectorAll('.book');
+    const descriptionBox = document.getElementById('book-description');
+
+    books.forEach(function(book) {
+        book.addEventListener('mouseover', function() {
+            const description = this.getAttribute('data-description');
+            descriptionBox.textContent = description;
+        });
+
+        book.addEventListener('mouseout', function() {
+            descriptionBox.textContent = "{% trans 'Hover over a book to see its description' %}";
+        });
+    });
+});
+</script>
+
+</body>
+</html>

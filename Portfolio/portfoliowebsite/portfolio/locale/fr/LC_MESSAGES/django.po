@@ -1,0 +1,338 @@
+msgid "Adam's Portfolio"
+msgstr "Le Portfolio d'Adam"
+
+msgid "Adam Sadaka"
+msgstr "Adam Sadaka"
+
+msgid "Home"
+msgstr "Accueil"
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Resources"
+msgstr "Ressources"
+
+msgid "Reviews"
+msgstr "Avis"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+msgid "YouTube"
+msgstr "YouTube"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Adam's Image"
+msgstr "Image d'Adam"
+
+msgid "Welcome! 👋"
+msgstr "Bienvenue! 👋"
+
+msgid "I'm ADAM your"
+msgstr "Je suis ADAM votre"
+
+msgid "Let’s boost your business with:"
+msgstr "Boostons ensemble votre business avec:"
+
+msgid "- Data Analysis"
+msgstr "- L' Analyse des Données"
+
+msgid "- Data Visualisation"
+msgstr "- La Visualisation des Données"
+
+msgid "- Analytics Engineering"
+msgstr "- L' Analytics Engineering"
+
+msgid "My Skillset"
+msgstr "Mes Compétences"
+
+msgid "My Projects"
+msgstr "Mes Projets"
+
+msgid "Projects"
+msgstr "Projets"
+
+msgid "How I Can Help You"
+msgstr "Comment je peux vous aider"
+
+msgid "BOOST YOUR BUSINESS WITH THE POWER OF DATA:"
+msgstr "BOOSTEZ VOTRE ENTREPRISE AVEC LA PUISSANCE DES DONNÉES :"
+
+msgid "Transform raw data into actionable insights with expert help and guidance for a competitive edge."
+msgstr "Transformez les données brutes en informations exploitables avec mon aide et mes conseils pour une efficacité accrue."
+
+msgid "🔍 Seamless Data Collection: Capture high-quality, reliable data effortlessly to power your strategy."
+msgstr "🔍 Collecte de données fluide : capturez des données de qualité et fiables efficacement pour booster votre stratégie."
+
+msgid "🔒 Data Integrity: Ensure accuracy and trustworthiness with clean, error-free data."
+msgstr "🔒 Intégrité des données : assurez l'exactitude et la fiabilité des données propres et sans erreur."
+
+msgid "🧠 Smart Data Modeling: Build scalable, efficient models that drive deeper, more valuable insights."
+msgstr "🧠 Modélisation des données : construisez des modèles évolutifs et efficaces qui génèrent des insights précieuses."
+
+msgid "📊 Impactful Analysis & Visualization: Make data-driven decisions with clear, compelling analytics and visuals."
+msgstr "📊 Analyse et visualisation percutantes : prenez des décisions basées sur les données avec des analyses et des visuels clairs et convaincants."
+
+msgid "ELEVATE YOUR TEAM'S DATA SKILLS:"
+msgstr "ÉLEVEZ LES COMPÉTENCES EN DONNÉES DE VOTRE ÉQUIPE :"
+
+msgid "Sharing knowledge is essential for growth and is one of my core values. Let me partner with your team to drive success through:"
+msgstr "Le partage des connaissances fait partie de mes valeurs fondamentales. Je serais ravi d'aider vos équipes à réussir leurs projets via:"
+
+msgid "🧠 Interactive Courses: Master data tools from collection to visualization through engaging in-person or virtual sessions."
+msgstr "🧠 Cours interactifs : Maîtrisez les outils data, de la collecte à la visualisation, à travers des sessions engageantes en personne ou en visioconférence."
+
+msgid "🎯 Practical Learning: Tackle real-world data challenges confidently with hands-on, action-based training."
+msgstr "🎯 Apprentissage pratique : Relevez des défis réels en matière de données avec confiance grâce à une formation pratique et orientée vers l'action."
+
+msgid "📚 Customized Training: Tailored programs and resources designed specifically for your team’s needs, ensuring they excel."
+msgstr "📚 Formations personnalisées : Programmes et ressources sur mesure conçus spécifiquement pour les besoins de votre équipe, garantissant leur succès."
+
+msgid "🔍 Consulting: Provide clear guidance to keep your projects on the right track for successful outcomes."
+msgstr "🔍 Consulting: Fournissez des conseils clairs pour maintenir vos projets sur la bonne voie et obtenir des résultats satisfaisants.
+
+msgid "Resources I Recommend"
+msgstr "Ressources que je recommande"
+
+msgid "My YouTube & GitHub"
+msgstr "Ma chaîne YouTube & mon GitHub"
+
+msgid "Explore my Youtube channel and GitHub for diverse data use cases and tutorials. I provide practical examples, real business scenarios, and a taste of enterprise-level cases to boost your data skills. Perfect for data enthusiasts at any level, with resources designed to enhance your learning experience."
+msgstr "Explorez ma chaîne YouTube et GitHub pour divers cas d'utilisation de données et tutoriels. Je propose des exemples pratiques, des scénarios réels et un aperçu de projets d'entreprise pour améliorer vos compétences en données. Parfait pour les passionnés de données à tous les niveaux, avec des ressources conçues pour enrichir votre expérience d'apprentissage."
+
+msgid "My GitHub link"
+msgstr "Mon lien GitHub"
+
+msgid "My Youtube link"
+msgstr "Mon lien YouTube"
+
+msgid "Books"
+msgstr "Livres"
+
+msgid "Hover over a book to see its description"
+msgstr "Passez la souris sur un livre pour voir sa description"
+
+msgid "This book emphasizes the importance of context-driven dashboard design. It taught me how to present data in a way that drives actionable insights and supports business decision-making."
+msgstr "Ce livre souligne l'importance de la conception de tableaux de bord orientée par le contexte. Il m'a appris à présenter les données de manière à générer des informations exploitables et à soutenir la prise de décision commerciale."
+
+msgid "this book demystifies statistical concepts by grounding them in real-world contexts. It teaches how to critically analyze data, understand uncertainty, and avoid common errors, using evidence to support conclusions. Emphasizing clear communication, it guides readers to make informed, context-aware decisions based on solid statistical principles."
+msgstr "Ce livre démystifie les concepts statistiques en les ancrant dans des contextes réels. Il enseigne comment analyser les données de manière critique, comprendre l'incertitude et éviter les erreurs courantes, en utilisant des preuves pour soutenir les conclusions. En insistant sur une communication claire, il guide les lecteurs pour prendre des décisions informées et adaptées au contexte, basées sur des principes statistiques solides."
+
+msgid "This textbook provided me with a solid foundation in statistical theory and methods, highlighting the importance of rigorous data analysis and hypothesis testing in decision-making."
+msgstr "Ce manuel m'a fourni une base solide en théorie et méthodes statistiques, soulignant l'importance d'une analyse rigoureuse des données et de tests d'hypothèses dans la prise de décision."
+
+msgid "This book taught me how to efficiently transform and model data, leveraging SQL and dbt to streamline analytics workflows and improve data management practices, making it one of the few guides on the emerging role of analytics engineering."
+msgstr "Ce livre m'a appris comment transformer et modéliser les données efficacement, en utilisant SQL et dbt pour rationaliser les flux de travail analytiques et améliorer les pratiques de gestion des données, en faisant l'un des rares guides sur le rôle émergent de l'ingénierie analytique."
+
+msgid "This book is a masterclass in personal leadership and effectiveness. It taught me the importance of proactive behavior, setting clear goals, and prioritizing tasks that align with core values. It instilled the importance of continuous self-improvement and collaboration. These habits form a foundation for an effective and influential leader."
+msgstr "Ce livre est une masterclass sur le leadership personnel et l’efficacité. Il m'a appris l'importance d'un comportement proactif, de fixer des objectifs clairs et de prioriser les tâches qui correspondent aux valeurs fondamentales de soi. Il souligne l’importance de l’auto-amélioration continue et de la collaboration. Ces habitudes constituent la base d’un leader efficace et influent."
+
+msgid "Contact Me"
+msgstr "Contactez-moi"
+
+msgid "Let's talk about your data needs!"
+msgstr "Parlons de vos besoins en matière de données !"
+
+msgid "Fill out the form or send me an email at"
+msgstr "Remplissez le formulaire ou envoyez-moi un e-mail à"
+
+msgid "I'll get back to you shortly."
+msgstr "Je vous répondrai rapidement."
+
+msgid "Your Name"
+msgstr "Votre Nom"
+
+msgid "Your Email"
+msgstr "Votre Email"
+
+msgid "Your Message"
+msgstr "Votre Message"
+
+msgid "Send"
+msgstr "Envoyer"
+
+msgid "Thank you for reaching out! I'll be in touch soon."
+msgstr "Merci de m'avoir contacté ! Je vous recontacterai bientôt."
+
+msgid "Error: Please try again."
+msgstr "Erreur : Veuillez réessayer."
+
+msgid "Explore My Projects"
+msgstr "Explorez Mes Projets"
+
+msgid "Data Analytics Portfolio"
+msgstr "Portfolio d'Analyse de Données"
+
+msgid "Case Studies"
+msgstr "Études de Cas"
+
+msgid "Review real-world business problems and see how I approach them with data."
+msgstr "Découvrez des problèmes commerciaux réels et voyez comment je les aborde avec des données."
+
+msgid "Analytics Dashboards"
+msgstr "Tableaux de Bord Analytiques"
+
+msgid "Explore a range of interactive dashboards created for clients and personal projects."
+msgstr "Explorez une gamme de tableaux de bord interactifs créés pour des clients et des projets personnels."
+
+msgid "Data Visualizations"
+msgstr "Visualisations de Données"
+
+msgid "See examples of impactful data visualizations built using various tools and libraries."
+msgstr "Découvrez des exemples de visualisations de données percutantes réalisées à l'aide de divers outils et bibliothèques."
+
+msgid "Machine Learning Models"
+msgstr "Modèles de Machine Learning"
+
+msgid "Review end-to-end machine learning projects, from data preparation to model deployment."
+msgstr "Examinez des projets complets de machine learning, de la préparation des données au déploiement du modèle."
+
+msgid "Business Use Cases"
+msgstr "Cas d'Usage Business"
+
+msgid "Discover how data solutions can directly impact business performance and growth."
+msgstr "Découvrez comment les solutions basées sur les données peuvent avoir un impact direct sur la performance et la croissance de l'entreprise."
+
+msgid "More About Me"
+msgstr "En Savoir Plus Sur Moi"
+
+msgid "Contact Information"
+msgstr "Informations de Contact"
+
+msgid "Projects Overview"
+msgstr "Aperçu des Projets"
+
+msgid "Follow Me On"
+msgstr "Suivez-moi sur"
+
+msgid "Terms & Conditions"
+msgstr "Conditions Générales"
+
+msgid "Privacy Policy"
+msgstr "Politique de Confidentialité"
+
+msgid "Portfolio powered by Django"
+msgstr "Portfolio propulsé par Django"
+
+msgid "Thank you for visiting! Please take some time to view my skillset ↗️"
+msgstr "Merci de votre visite ! Prenez un moment pour consulter mes compétences ↗️"
+
+msgid "Thank you for visiting! Please take some time to view my portfolio ↗️"
+msgstr "Merci de votre visite ! Prenez un moment pour consulter mon portfolio ↗️"
+
+msgid "Data Analysis Projects"
+msgstr "Projets d'analyse de données"
+
+msgid "Outlier Detection using Linear Regression"
+msgstr "Détection d'anomalies par régression linéaire"
+
+msgid "Advanced statistical method to detect anomalies in products measures data."
+msgstr "Méthode statistique avancée pour détecter des anomalies dans les mesures des produits."
+
+msgid "Statistical Methods"
+msgstr "Méthodes statistiques"
+
+msgid "Outlier Detection using IQR (Interquartile Range)"
+msgstr "Détection d'anomalies avec l'IQR (intervalle interquartile)"
+
+msgid "Advanced statistical method to detect anomalies in products expiry dates."
+msgstr "Méthode statistique avancée pour détecter des anomalies dans les dates d'expiration des produits."
+
+msgid "Outlier Detection using Z-Score"
+msgstr "Détection d'anomalies par Z-Score"
+
+msgid "Advanced statistical method to detect outliers in IQ measures dataset."
+msgstr "Méthode statistique avancée pour détecter des anomalies dans un ensemble de données de mesures de QI."
+
+msgid "Customer Segmentation"
+msgstr "Segmentation client"
+
+msgid "Clients classification using RFM analysis (Recency, Frequency, Monetary) and K-means."
+msgstr "Classification des clients à l'aide de l'analyse RFM (Récence, Fréquence, Montant) et de l'algorithme K-means."
+
+msgid "CLV Analysis (Customer Lifetime Value)"
+msgstr "Analyse de la CLV (valeur à vie du client)"
+
+msgid "How to estimate client revenue based on customer group attributes."
+msgstr "Comment estimer le revenu des clients en fonction des attributs du groupe de clients."
+
+msgid "Data Visualization Projects"
+msgstr "Projets de visualisation de données"
+
+msgid "Metabase Resume Dashboard"
+msgstr "Tableau de bord de CV avec Metabase"
+
+msgid "How to use Metabase and PostgreSQL to build your Resume Dashboard."
+msgstr "Comment utiliser Metabase et PostgreSQL pour créer votre CV sous forme de dashboard."
+
+msgid "Car Rental KPI Monitoring Dashboard"
+msgstr "Dashboard de suivi KPI de location de voitures"
+
+msgid "How to build a KPI monitoring dashboard on Tableau Public for free using Google Sheets and Python."
+msgstr "Comment créer un tableau de bord de suivi des KPI sur Tableau Public gratuitement en utilisant Google Sheets et Python."
+
+msgid "Streamlit Health App"
+msgstr "Application de santé avec Streamlit"
+
+msgid "How to build a Streamlit App with a dashboard using my smartwatch data."
+msgstr "Comment créer une application Streamlit avec un tableau de bord en utilisant les données d'une montre connectée Withings."
+
+msgid "Data Engineering and Workflow Automation Projects"
+msgstr "Projets Data Engineering et automatisation des tâches et flux"
+
+msgid "Car Rental Pricing"
+msgstr "Pricing pour une entreprise de location de voitures"
+
+msgid "Developed a pricing strategy using data from car rental comparison websites, scraped and processed to create a robust pricing logic."
+msgstr "Développement d'une stratégie de tarification en utilisant les données des sites comparateurs de location de voitures, collectées et traitées pour créer une logique de tarification."
+
+msgid "Health Data Retrieval with Withings API"
+msgstr "Récupération de données santé avec l'API Withings"
+
+msgid "Automated retrieval of heart rate and steps data using the Withings watch API, processed and ingested into a PostgreSQL database for analysis and visualization."
+msgstr "Récupération automatisée des données de fréquence cardiaque et de pas à l'aide de l'API de la montre Withings, traitées et intégrées dans une base de données PostgreSQL pour analyse et visualisation."
+
+msgid "Car Rental Data Pipeline with Google Sheets"
+msgstr "Pipeline de données pour la location de voitures avec Google Sheets"
+
+msgid "Built an automated pipeline to retrieve car rental data from Google Sheets, where customer service logs entries, the data is then transformed for future analysis and dashboard integration."
+msgstr "Création d'un pipeline automatisé pour récupérer les données de location de voitures à partir de Google Sheets, où le service client enregistre les entrées, les données sont ensuite transformées pour une analyse future et une intégration dans un tableau de bord."
+
+msgid "\"Adam has the ideal profile that all managers seek."
+msgstr "\"Adam a le profil idéal que tous les managers recherchent.\""
+
+msgid "His innovative spirit and dedication have made our department a benchmark within the company. His autonomy drives him to continually seek the best in his field and offer the best solutions to his clients."
+msgstr "Son esprit innovant et son dévouement ont permis à notre service de devenir une référence au sein de l'entreprise. Son autonomie le pousse toujours à aller plus loin, en cherchant constamment ce qu'il y a de mieux dans son domaine pour proposer les meilleures solutions à ses clients."
+
+msgid "What particularly distinguishes Adam is his ability to anticipate problems and adapt his proposals accordingly. He can identify opportunities and turn ideas into concrete actions with measurable and sustainable results."
+msgstr "Ce qui distingue particulièrement Adam, c'est sa capacité à anticiper les problèmes et à adapter ses propositions en conséquence. Il sait identifier des opportunités et transformer des idées en actions concrètes, avec des résultats mesurables et durables."
+
+msgid "I have had the pleasure of watching him grow since his internship, where he immediately demonstrated great potential. Today, he has become an essential member of our team, and I am very grateful for all he has accomplished. His professionalism, creativity, and passion for excellence make him an exceptional collaborator."
+msgstr "J'ai eu le plaisir de le voir évoluer depuis son stage, où il a tout de suite démontré un grand potentiel. Aujourd'hui, il est devenu un membre essentiel de notre équipe, et je suis très reconnaissant pour tout ce qu'il a accompli. Son professionnalisme, sa créativité et sa passion pour l'excellence font de lui un collaborateur exceptionnel."
+
+msgid "\"I had the chance to work with Adam on various DATA/PIM projects. He easily leveraged his solid expertise in the analytical field. His ability to transform raw data into clear and relevant insights significantly contributed to our successes. Adam is attentive, rigorous, passionate, and always willing to share knowledge. He has proven to be a valuable asset to the team.\""
+msgstr "\"J'ai eu la chance de travailler avec Adam sur différents projets DATA/PIM. Il a aisément mis à profit sa solide expertise dans le domaine analytique. Sa grande capacité à transformer la donnée brute en insights clairs et pertinents a significativement contribué à nos succès. Adam est à l'écoute, rigoureux, passionné et toujours dans le partage de connaissances. Il s'est avéré être un atout précieux pour l'équipe.\""
+
+msgid "\"I was fortunate to have Adam as a mentor at Monoprix. Always available, proactive, and a great teacher, he always finds effective solutions to problems. His expertise and support truly made a difference!\""
+msgstr "\"J'ai eu la chance d'avoir Adam comme mentor chez Monoprix. Toujours disponible, proactif et super pédagogue, il trouve toujours des solutions efficaces aux problèmes. Son expertise et son soutien ont vraiment fait la différence!\""
+
+msgid "My Note to All"
+msgstr "Mon message à tous"
+
+msgid "What Collarborators and Friends Say about Me"
+msgstr "Ce que mes Collègues et Amis Disent de Moi"
+
+msgid "Thank you for your kind words and trust. Each review is a reminder of the path we`ve walked together, yet also of the journey that still lies ahead."
+msgstr "Merci pour vos gentils mots et votre confiance. Chaque avis est un rappel du chemin que nous avons parcouru ensemble, mais aussi du voyage à venir."
+
+msgid "As Michelangelo said at 87, \"I am still learning\". With every project, I strive to grow, learn, and refine my craft."
+msgstr "Comme l'a dit Michel-Ange à 87 ans, \"J'apprends toujours\". À chaque projet, je lutte pour grandir, apprendre et perfectionner mon savoir-faire."
+
+msgid "Let`s continue walking this path together 🤝🏻"
+msgstr "Continuons à parcourir ce chemin ensemble 🤝🏻"

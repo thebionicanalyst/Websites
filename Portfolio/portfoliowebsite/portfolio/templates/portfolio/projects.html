@@ -1,0 +1,410 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% trans "Portfolio" %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #000000;
+        }
+
+        p {
+            font-size: 1em;
+            color: #333333;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #444444;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding-bottom: 20px;
+        }
+
+        .project {
+            background-color: #696969;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .project h2 {
+            font-size: 1.4em;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-size: 0.9em;
+            color: #cccccc;
+            margin-bottom: 15px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-youtube {
+            background-color: #ff0000;
+        }
+
+        .btn-youtube:hover {
+            background-color: #cc0000;
+        }
+
+        .btn-github {
+            background-color: #000000;
+        }
+
+        .btn-github:hover {
+            background-color: #333333;
+        }
+
+        .btn-db {
+            background-color: #00ff11bf;
+        }
+
+        .btn-db:hover {
+            background-color: #29cc00cf;
+        }
+        
+        .btn-Comingsoon {
+            background-color: #989c98bf;
+        }
+
+        .tags {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: #444444;
+            color: #ffffff;
+            font-size: 0.75em;
+            padding: 3px 8px;
+            border-radius: 5px;
+        }
+
+        .container {
+            width: 100%;
+        }
+    /* Message box styling */
+.message-box {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Stay on top */
+    font-family: 'Roboto', sans-serif;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    z-index: 1000000; 
+    animation: slidDown 1s ease-in-out forwards;
+}
+@keyframes slidDown {
+    from { top: -600px; }
+    to { top: 50px; }
+}
+
+/* Close button styling */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+/* Glowing effect on the Portfolio button */
+.nav-links a[href="{% url 'skillset' %}"] {
+    animation: glow 1.5s infinite;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Keyframe for the glowing effect */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 1), 0 0 20px rgba(0, 255, 0, 0.7);
+    }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'portfolio/namesignature.png' %}" alt="{% trans 'Adam Sadaka' %}">
+        </div>
+        <div class="nav-links">
+            <a href="/">{% trans 'Home' %}</a>
+            <a href="{% url 'skillset' %}">{% trans 'Skillset' %}</a>
+            <a href="#" onclick="openContactForm()">{% trans 'Contact' %}</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/a-sadaka/" target="_blank">
+                    <img src="{% static 'portfolio/in.png' %}" alt="{% trans 'LinkedIn' %}">
+                </a>
+                <a href="https://www.youtube.com/@BionicAnalytics" target="_blank">
+                    <img src="{% static 'portfolio/youtube.png' %}" alt="{% trans 'YouTube' %}">
+                </a>
+                <a href="https://github.com/BionicAnalyst/BionicAnalyticsLabs" target="_blank">
+                    <img src="{% static 'portfolio/github.png' %}" alt="{% trans 'GitHub' %}">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="language-selector">
+        <form id="language-form" action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="language" id="language-input" value="{{ LANGUAGE_CODE }}">
+        </form>
+        <img src="{% static 'portfolio/en.png' %}" alt="{% trans 'English' %}" title="{% trans 'English' %}" onclick="changeLanguage('en')" class="language-flag {% if LANGUAGE_CODE == 'en' %}selected{% endif %}">
+        <img src="{% static 'portfolio/fr.png' %}" alt="{% trans 'French' %}" title="{% trans 'French' %}" onclick="changeLanguage('fr')" class="language-flag {% if LANGUAGE_CODE == 'fr' %}selected{% endif %}">
+    </div>
+
+    <div class="message-box" id="message-box">
+        
+        <span class="message-text">{% trans 'Thank you for visiting! Please take some time to view my skillset ↗️' %}</span>
+<<<<<<< HEAD
+        <button class="close-btn" onclick="closeMessageBox()">×</button><br>
+        <span class="message-text">{% trans 'Color code:' %}</span><br><br>
+        <a class="btn btn-db">{% trans 'Dashboard link' %}</a><br><br>
+        <a class="btn btn-youtube">{% trans 'YouTube link' %}</a><br><br>
+        <a class="btn btn-github">{% trans 'GitHub link' %}</a><br><br>
+        <a class="btn btn-Comingsoon">{% trans 'Coming soon' %}</a>
+=======
+        <button class="close-btn" onclick="closeMessageBox()">×</button>
+>>>>>>> 52181c8 (Describe the changes you made)
+    </div>
+    
+    <div id="content-area" class="content">
+        <div class="content-container">
+            <div class="container">
+    
+                <!-- Data Analysis Projects -->
+                <h2 class="section-title">{% trans 'Data Analysis Projects' %}</h2>
+                <div class="projects">
+                    <div class="project">
+                        <h2>{% trans 'Outlier Detection using Linear Regression' %}</h2>
+                        <p>{% trans 'Advanced statistical method to detect anomalies in products measures data.' %}</p>
+                        <div class="links">
+                            <!-- <a href="" target="_blank" class="btn btn-youtube">{% trans 'YouTube' %}</a> -->
+                            <a href="https://github.com/BionicAnalyst/BionicAnalyticsLabs/blob/main/notebook_outlier_detection_linear_regression.ipynb" target="_blank" class="btn btn-github">{% trans 'GitHub' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Tableau' %}</span>
+                            <span class="tag">{% trans 'Statistical Methods' %}</span>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h2>{% trans 'Outlier Detection using IQR (Interquartile Range)' %}</h2>
+                        <p>{% trans 'Advanced statistical method to detect anomalies in products expiry dates.' %}</p>
+                        <div class="links">
+                            <!-- <a href="" target="_blank" class="btn btn-youtube">{% trans 'YouTube' %}</a> -->
+                            <a href="https://github.com/BionicAnalyst/BionicAnalyticsLabs/blob/main/notebook_outlier_detection_iqr.ipynb" target="_blank" class="btn btn-github">{% trans 'GitHub' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Python' %}</span>
+                            <span class="tag">{% trans 'Statistical Methods' %}</span>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h2>{% trans 'Outlier Detection using Z-Score' %}</h2>
+                        <p>{% trans 'Advanced statistical method to detect outliers in IQ measures dataset.' %}</p>
+                        <div class="links">
+                            <!-- <a href="" target="_blank" class="btn btn-youtube">{% trans 'YouTube' %}</a> -->
+                            <a href="https://github.com/BionicAnalyst/BionicAnalyticsLabs/blob/main/notebook_outlier_detection_z_score.ipynb" target="_blank" class="btn btn-github">{% trans 'GitHub' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Python' %}</span>
+                            <span class="tag">{% trans 'Statistical Methods' %}</span>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h2>{% trans 'Customer Segmentation' %}</h2>
+                        <p>{% trans 'Clients classification using RFM analysis (Recency, Frequency, Monetary) and K-means.' %}</p>
+                        <div class="links">
+                            <a href="https://github.com/BionicAnalyst/BionicAnalyticsLabs/blob/main/notebook_customer_segmentation.ipynb" target="_blank" class="btn btn-github">{% trans 'GitHub' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Python' %}</span>
+                            <span class="tag">{% trans 'Machine Learning' %}</span>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h2>{% trans 'CLV Analysis (Customer Lifetime Value)' %}</h2>
+                        <p>{% trans 'How to estimate client revenue based on customer group attributes.' %}</p>
+                        <div class="links">
+                            <a target="_blank" class="btn btn-Comingsoon">{% trans 'Coming soon' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Python' %}</span>
+                            <span class="tag">{% trans 'Statistical Methods' %}</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Data Visualization Projects -->
+                <h2 class="section-title">{% trans 'Data Visualization Projects' %}</h2>
+                <div class="projects">
+    
+                    <div class="project">
+                        <h2>{% trans 'Metabase Resume Dashboard' %}</h2>
+                        <p>{% trans 'How to use Metabase and PostgreSQL to build your Resume Dashboard.' %}</p>
+                        <div class="links">
+                            <a href="{% url 'skillset' %}" target="_blank" class="btn btn-db">{% trans 'Dashboard' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Metabase' %}</span>
+                            <span class="tag">{% trans 'PostgreSQL' %}</span>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h2>{% trans 'Car Rental KPI Monitoring Dashboard' %}</h2>
+                        <p>{% trans 'How to build a KPI monitoring dashboard on Tableau Public for free using Google Sheets and Python.' %}</p>
+                        <div class="links">
+                            <a href="https://public.tableau.com/app/profile/adam.sadaka/viz/SuiviVentes/ALL" target="_blank" class="btn btn-db">{% trans 'Dashboard' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Tableau' %}</span>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h2>{% trans 'Streamlit Health App' %}</h2>
+                        <p>{% trans 'How to build a Streamlit App with a dashboard using my smartwatch data.' %}</p>
+                        <div class="links">
+                            <a href="YOUR_GITHUB_LINK" target="_blank" class="btn btn-github">{% trans 'GitHub' %}</a>
+                            <a href="{% url 'streamlit' %}" target="_blank" class="btn btn-db">{% trans 'Dashboard' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Python' %}</span>
+                            <span class="tag">{% trans 'Streamlit' %}</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <h2 class="section-title">{% trans 'Data Engineering and Workflow Automation Projects' %}</h2>
+                <div class="projects">
+                    <div class="project">
+                        <h2>{% trans 'Car Rental Pricing' %}</h2>
+                        <p>{% trans 'Developed a pricing strategy using data from car rental comparison websites, scraped and processed to create a robust pricing logic.' %}</p>
+                        <div class="links">
+                            <a href="" target="_blank" class="btn btn-Comingsoon">{% trans 'Coming soon' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Python' %}</span>
+                            <span class="tag">{% trans 'PostgreSQL' %}</span>
+                            <span class="tag">{% trans 'dbt' %}</span>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h2>{% trans 'Health Data Retrieval with Withings API' %}</h2>
+                        <p>{% trans 'Automated retrieval of heart rate and steps data using the Withings watch API, processed and ingested into a PostgreSQL database for analysis and visualization.' %}</p>
+                        <div class="links">
+                            <a href="" target="_blank" class="btn btn-Comingsoon">{% trans 'Coming soon' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Python' %}</span>
+                            <span class="tag">{% trans 'API' %}</span>
+                            <span class="tag">{% trans 'PostgreSQL' %}</span>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h2>{% trans 'Car Rental Data Pipeline with Google Sheets' %}</h2>
+                        <p>{% trans 'Built an automated pipeline to retrieve car rental data from Google Sheets, where customer service logs entries, the data is then transformed for future analysis and dashboard integration.' %}</p>
+                        <div class="links">
+                            <a href="" target="_blank" class="btn btn-Comingsoon">{% trans 'Coming soon' %}</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">{% trans 'Python' %}</span>
+                            <span class="tag">{% trans 'Gsheets' %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        function changeLanguage(lang) {
+            var form = document.getElementById('language-form');
+            var input = document.getElementById('language-input');
+            input.value = lang;
+            form.submit();
+        }
+
+        function openContactForm() {
+            // Redirect to the home page with a query parameter to open the contact form
+            window.location.href = "{% url 'home' %}?show_contact_form=true";
+        }
+
+        function closeMessageBox() {
+            var messageBox = document.getElementById('message-box');
+            messageBox.style.display = 'none';
+        };
+    </script>
+</body>
+</html>
